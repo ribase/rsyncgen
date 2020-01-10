@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Random string generator</title>
+    <meta name="description" content="Rsync">
+    <meta name="author" content="Rsync">
+
+    <link rel="stylesheet" href="../styles/css/bootstrap.css">
+
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-dark navbar-expand">
+    <div class="navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/rsyncgen/">Rsync</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/randomstring/">Randomstring</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12"><h1>Random string generator</h1></div>
+        <div class="col-12"><h2><small>Or an escape of a windows guy from <a href="https://de.wikipedia.org/wiki/Vim" target="_blank">Vim</a> </small></h2></div>
+
+        <div class="form-group col-6">
+            <div class="form-group">
+                <label>Amount of characters</label>
+                <input class="form-control" type="text" id="amount" name="characters"
+                       placeholder='Amount of characters' value="90" required>
+            </div>
+        </div>
+        <div class="form-group col-6">
+            <div class="form-group">
+                <label>Custom characters</label>
+                <input class="form-control" type="text" id="characters" name="characters"
+                       placeholder='Custom characters' value=";:_ÖÄÜ*!§$%&/()=?¡“¶¢[]|{}≠≠¿ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" required>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-group">
+                <button class="btn btn-info generate">Generate string</button>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label>Result:</label>
+            <pre class="result">
+
+            </pre>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="randomString.js"></script>
+</body>
+</html>

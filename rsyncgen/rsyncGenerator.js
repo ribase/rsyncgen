@@ -44,8 +44,8 @@ $(document).ready(function () {
 
         commandArray.push(serverPathOrigin)
 
-        if(result.handParams){
-            commandArray.push(result.handParams)
+        if(result.customparams.handParams){
+            commandArray.push(result.customparams.handParams)
         }
 
         if(result.options) {
