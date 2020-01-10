@@ -44,6 +44,10 @@ $(document).ready(function () {
 
         commandArray.push(serverPathOrigin)
 
+        if(result.handParams){
+            commandArray.push(result.handParams)
+        }
+
         if(result.options) {
             options = objectToString(result.options)
             commandArray.push(options)
