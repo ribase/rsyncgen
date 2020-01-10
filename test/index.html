@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Random string generator</title>
+    <meta name="description" content="Rsync">
+    <meta name="author" content="Rsync">
+
+    <link rel="stylesheet" href="../styles/css/bootstrap.css">
+
+</head>
+
+<body>
+
+<h1>TEST</h1>
+
+<h2></h2>
+
+
+
+<script>
+var Names1 = "Abschiebe-Mädchen,Altersangabe,Aschenputtel-Richterin,anonyme Handy-Nachricht,Ausbrech-Bär,Baby-Beweis,Balken-Fußball,Balkonmonster,Bauch-Geheimnis,Bein-ab-Professor,Benz-Baby,Benzin-Wut,Bestie,Bin-Laden-Vize,Blut-Rallye,Blutschande-Kinder,Blut-Vermögen,Boris Specker,Busen-Alarm,Busen-Ballarina,Busenblitzalarm,Busenmacher-Witwe,Busen-Krieg,Busen-Witwe,China-Sklaven,David Gagahoff,Deutürken,Deutürk-Fahne,Döner-Killer,Drogen-Attacke auf dem Schulhof,Dutten,Eis-Baby,Eis-Eltern,Eis-Halle,Eis-Mädchen,Eis-Mutter,Eis-Vater,Energie-Abzocker,Erb-Penner,Erdnuss-Komet,Flucht-Affe,folgenlos Beschuldigter,Fremdkuss,Ganz Deutschland,Gasnosse,Glatzkopf-Killer,Gluck-gluck-weg-war'n-sie-Schwimmer,Google-Killer,Grand-Prix-Porno,Grinse-Killer,Grinsi-Klinsi,Grusiker,Gyros-Bomber,Hamster-Dödel,Haschisch-Bomber,Hunger-Hund,HunSticker,Michelle,Freie Sicht auf die Hupen,Hurensohn,Igelmädchen,Inzest-Paar,Irre von Teheran,Jahrtausend-Papst,Jammer-Buch,Käfigbande,Kaiser-Heli,Käse-Tussi,Katzen-Kraft,Killer-Krankheit,Klau-Chance,Klümchen,Klümchen Nr. 2,Klum-Kugel,Krawall-Bär,Kuss-Unfall,Krebsjunge,Kuckucks-Vater (auch Zahle-Papa),Kurti (auch faltiger Kurti),Kurvikova,Leichenprofessor,Liebesdepp,Deutschlands größter,Liebesmonster,Mini-Models,Maulkorb-Urteil,Mini-Enrique,Mord-Reiter,Müll-Kinder,nachrechnen,Nackt-Freundin,Nackt-Fotograf,Nackt-Test,Nackt-Unfall,Nackt-Tochter,Nackt-Zensur,Narbenmann,Nippel-Alarm,Nippel-News,Ohr-ab-Hund,Ohr-Abschneider,Papstneidische Glaubensbrüder,Pasta-Schnute,Penis-Attacke,Penis-Opfer,Perversling,Pfui-Liga,Pfui-Profis,Pfui-Skandal,Pfui-TV,Pfusch-Mädchen,Pilzminator,Pipi-Fälschung,Pipi-Überwachung,Pocasso,Pop-Titan,Popo-Alarm,Popo-Unfall,Porno-Rückfall,Schmuddel-Rückfall,Porno-Verdacht,Prinzessin von Hohenkullern,Prügelnacht von Istanbul,Prügel-Nacht von Potsdam,Prügel-Prinz,Prügel-Türke,Pummelnaldo,Pummel-Tore,Reifen-Depp,renommiert,Rollstuhl-Mädchen,Rollstuhl-Sängerin,Sahara-Sex,SAT 1-Baby,Schamlos-Ehepaar,Schaumglocken,Schlechtschreibreform,Schleck-Fall,Schlüpfer-Opa,schmidtzig,Schnief-Viren,Schnitzel-Stefan,Schummel-Huren,Schummel-Pinkler,See-Schlacht,Sekt-Anschlag,Sekt-Politiker (→ Sekt-Anschlag),Sendezeit schinden,sexeln,Sex-Erpressung,Sex-Hure,Sing-Unfall,Single,SMSeln,Super-Polizist,SNN,Suppen-Sylvie,Tanga-Grapscher,Tanga-Terror,Telefonbusen,Terror-Witwe,Todespfleger,Totraser,Tot-Spritzer,Tränenjunge (auch Tränenkind),Tsunami-Kind,Türkei-Virus,Türken-Sünder,TV-Titan,Unterpfotung,Umzugskisten-Gorilla,Venus-Geweih,Wasser-Schweini,Riesen-Wirbel,Sex-Wirbel,Liebes-Wirbel,Porno-Wirbel,Baby-Wirbel,Zisch-und-weg-Polo,Zombie-Killer,Zuckertüte,Zwischen Schambein und Schaumglocken"
+var strongVerbs = "bäckt,fährt,gräbt,lädt,schlägt,trägt,wächst,wäscht,bläst,brät,fällt,hält,lässt,rät,schläft,empfängt,fängt,geschieht,liest,sieht,befiehlt,empfiehlt,stiehlt,gebiert,isst,frisst,gibt,misst,tritt,vergisst,birgt,birst,bricht,erschrickt,gilt,hilft,nimmt,schilt,spricht,sticht,stirbt,trifft,verdirbt,wirbt,wirft,drischt,ficht,flicht,quillt,schmilzt,schwillt,gärt, wägt,säuft,läuft,stößt\n"
+var praepos = "als,ab,außer,aus,bei,gegenüber,mit,nach,seit,von,zu,bis,durch,für,um,gegen,ohne,entlang,an,auf,in,über,unter,vor,hinter,zwischen,neben,wegen,während,infolge,statt,trotz"
+var headline = "Angst,Angstzustand,Auflösung,Aufregung,Erschrecken,Heidenangst,Höllenangst,Konfusion,Kopflosigkeit,Panik,Schreck,Schrecken,Unruhe,Verwirrung,Bestürzung,Entsetzen,Erschrockenheit,Erschütterung,Fassungslosigkeit,Grauen,Grausen,Horror,Panik,Schauder,Schreck,Schrecken,Verwirrung,Beschämung,Blamage,Bloßstellung,Demütigung,Entehrung,Erniedrigung,Kompromittierung,Kränkung,Schande,Schandfleck,Schandmal,Schimpf,Unehre,Verruf,Aufruhr,Aufsehen,Beachtung,Eklat,Furore,Hallo,Klamauk,Lärm,Radau,Sensation,Tamtam,Verwirrung,Zirkus"
+var Names2 = "Bruno Ganz,Hannelore Elsner,Karl Lagerfeld,Doris Day,Sigmund Jähn,Rudi Assauer,Adolf Hitler,Angela Merkel,Donald Trump,Nina Hagen,Dominik Weiss,Tobias Scholz,Alexander Henrichsen,Sebastian Thadewald,Thorsten Frings,Markus Söder,Michael Müller,Reiner Haseloff,Malu Dreyer,Olaf Scholz,Horst Seehofer,Heiko Maas,Apache 207,Nimo,Tyga,Mark Forster,Billie Eilish,Loredana"
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="randomString.js"></script>
+
+
+<script>
+    var item = []
+    item.push(headline.split(',')[Math.floor(Math.random()*headline.split(',').length)]+'!');
+    item.push('"'+Names1.split(',')[Math.floor(Math.random()*Names1.split(',').length)]+'"');
+    item.push(strongVerbs.split(',')[Math.floor(Math.random()*strongVerbs.split(',').length)]);
+   // item.push(praepos.split(',')[Math.floor(Math.random()*praepos.split(',').length)]);
+    item.push(Names2.split(',')[Math.floor(Math.random()*Names2.split(',').length)]);
+
+
+    $('h2').html(item.join(' '))
+</script>
+
+</body>
+</html>
+
+
+
