@@ -14,11 +14,11 @@ $(document).ready(function() {
         localStorage.setItem("items", "");
     } else {
         $.each(localStorage.getItem('items').split(','), function(i,v) {
+            $('.old-results').html('')
             $('.old-results').append('<div>'+v+'</div>')
         })
     }
 
-    $('#result').html('');
     counter = 0;
     $.each(randomWords, function(i,v) {
         console.log(i);
@@ -49,17 +49,12 @@ $(document).ready(function() {
 
     localStorage.setItem('items', storageItem + sentence)
 
-    $.each(localStorage.getItem('items').split(','), function(i,v) {
+    $.each(localStorage.getItem('items').split(',').reverse(), function(i,v) {
         $('.old-results').append('<div>'+v+'</div>')
     })
 
-
-    ul = $('.old-results'); // your parent ul element
-    ul.children().each(function(i,li){ul.prepend(li)})
     $('body').on('click', 'a.next.roll', function() {
         id = $(this).parent().parent().attr('id');
-
-        console.log(id);
 
         content = randomWords[id].split(',')[Math.floor(Math.random()*randomWords[id].split(',').length)]
         if(id == "buzz") {
@@ -85,12 +80,8 @@ $(document).ready(function() {
 
         $('.old-results').html('')
 
-        $.each(localStorage.getItem('items').split(','), function(i,v) {
+        $.each(localStorage.getItem('items').split(',').reverse(), function(i,v) {
             $('.old-results').append('<div>'+v+'</div>')
         })
-
-
-        ul = $('.old-results'); // your parent ul element
-        ul.children().each(function(i,li){ul.prepend(li)})
     })
 })
