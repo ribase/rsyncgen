@@ -13,8 +13,8 @@ $(document).ready(function() {
     if (localStorage.getItem('items') === null) {
         localStorage.setItem("items", "");
     } else {
+        $('.old-results').html('')
         $.each(localStorage.getItem('items').split(','), function(i,v) {
-            $('.old-results').html('')
             $('.old-results').append('<div>'+v+'</div>')
         })
     }
