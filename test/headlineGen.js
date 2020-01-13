@@ -13,7 +13,7 @@ $(document).ready(function() {
     if (localStorage.getItem('items') === null) {
         localStorage.setItem("items", "");
     } else {
-        $('.old-results').html('')
+        $('.old-results').empty();
         $.each(localStorage.getItem('items').split(','), function(i,v) {
             $('.old-results').append('<div>'+v+'</div>')
         })
@@ -49,6 +49,7 @@ $(document).ready(function() {
 
     localStorage.setItem('items', storageItem + sentence)
 
+    $('.old-results').empty();
     $.each(localStorage.getItem('items').split(',').reverse(), function(i,v) {
         $('.old-results').append('<div>'+v+'</div>')
     })
@@ -78,7 +79,7 @@ $(document).ready(function() {
         localStorage.setItem('items', storageItem + sentence)
 
 
-        $('.old-results').html('')
+        $('.old-results').empty();
 
         $.each(localStorage.getItem('items').split(',').reverse(), function(i,v) {
             $('.old-results').append('<div>'+v+'</div>')
