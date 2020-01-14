@@ -24,6 +24,14 @@ $(document).ready(function() {
 
         $('#result').empty();
 
+        if(place === ""){
+            place = null
+        }
+
+        if(name === ""){
+            name = null
+        }
+
         genHeadline(place, name)
 
     })
@@ -48,11 +56,11 @@ function genHeadline(place, name) {
         if(i == "place" && place !== null) {
             content = place
         }
-
         if (i == "names" && name !== null) {
             content = name
         }
 
+        console.log(content);
         if(i == "buzz"){
             var container = '<div class="d-flex flex-wrap flex-column justify-content-start headliner" id="'+i+'"><div class="content">'+content+'!</div></div>'
             counter++
