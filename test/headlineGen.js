@@ -10,6 +10,27 @@ randomWords["names"] = "Fahrrad,Feuerlöscher,Film,Foto,Freiheit,Gehirn,Gehweg,G
 
 
 $(document).ready(function() {
+
+
+    genHeadline(null, null)
+
+    $('body').on('submit', '#custom', function(e) {
+        e.preventDefault();
+
+        var name = $('#name').val();
+        var place = $('#place').val();
+
+        console.log(place, name);
+
+        $('#result').empty();
+
+        genHeadline(place, name)
+
+    })
+
+})
+
+function genHeadline(place, name) {
     if (localStorage.getItem('items') === null) {
         localStorage.setItem("items", "");
     } else {
@@ -23,14 +44,23 @@ $(document).ready(function() {
     $.each(randomWords, function(i,v) {
         console.log(i);
         content = v.split(',')[Math.floor(Math.random()*v.split(',').length)]
+
+        if(i == "place" && place !== null) {
+            content = place
+        }
+
+        if (i == "names" && name !== null) {
+            content = name
+        }
+
         if(i == "buzz"){
-            var container = '<div class="d-flex flex-wrap flex-column justify-content-start headliner" id="'+i+'"><div class="content">'+content+'!</div> <div class="controls"><a href="#" class="next roll">Next!</a></div> </div>'
+            var container = '<div class="d-flex flex-wrap flex-column justify-content-start headliner" id="'+i+'"><div class="content">'+content+'!</div></div>'
             counter++
         }else if(i == 'headline') {
-            var container = '&nbsp;<div class="d-flex flex-wrap flex-column justify-content-start headliner" id="'+i+'"><div class="content">"'+content+'"</div> <div class="controls"><a href="#" class="next roll">Next!</a></div> </div>'
+            var container = '&nbsp;<div class="d-flex flex-wrap flex-column justify-content-start headliner" id="'+i+'"><div class="content">"'+content+'"</div></div>'
             counter++
-        }else {
-            var container = '&nbsp;<div class="d-flex flex-wrap flex-column justify-content-start headliner" id="'+i+'"><div class="content">'+content+'</div> <div class="controls"><a href="#" class="next roll">Next!</a></div> </div>'
+        }else{
+            var container = '&nbsp;<div class="d-flex flex-wrap flex-column justify-content-start headliner" id="'+i+'"><div class="content">'+content+'</div></div>'
         }
         $('#result').append(container)
     })
@@ -53,36 +83,4 @@ $(document).ready(function() {
     $.each(localStorage.getItem('items').split(',').reverse(), function(i,v) {
         $('.old-results').append('<div>'+v+'</div>')
     })
-
-    $('body').on('click', 'a.next.roll', function() {
-        id = $(this).parent().parent().attr('id');
-
-        content = randomWords[id].split(',')[Math.floor(Math.random()*randomWords[id].split(',').length)]
-        if(id == "buzz") {
-            var html = '<div class="content">'+content+'!</div><div class="controls"><a href="#" class="next roll">Next!</a></div> '
-        } else if(id == "headline") {
-            var html = '<div class="content">"'+content+'"</div><div class="controls"><a href="#" class="next roll">Next!</a></div> '
-        } else {
-            var html = '<div class="content">'+content+'</div><div class="controls"><a href="#" class="next roll">Next!</a></div> '
-        }
-        $('#'+id).html(html)
-        var sentence = "";
-
-        $('.content').each(function(){
-            sentence += $(this).text() + " "
-        })
-
-        storageItem = localStorage.getItem("items")
-        if( storageItem.length > 0) {
-            storageItem=storageItem+', '
-        }
-        localStorage.setItem('items', storageItem + sentence)
-
-
-        $('.old-results').empty();
-
-        $.each(localStorage.getItem('items').split(',').reverse(), function(i,v) {
-            $('.old-results').append('<div>'+v+'</div>')
-        })
-    })
-})
+}
